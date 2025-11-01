@@ -1,0 +1,30 @@
+public class Settings
+{
+     
+    private static readonly string configPath;
+
+    
+    static Settings()
+    {
+        configPath = "config.json";
+    }
+
+    
+    public static void ShowConfigPath()
+    {
+        Console.WriteLine($"Путь к файлу конфигурации: {configPath}");
+    }
+}
+
+
+class Program
+{
+    static void Main()
+    {
+       
+        Settings.ShowConfigPath();
+
+        
+        Console.ReadLine();
+    }
+}
