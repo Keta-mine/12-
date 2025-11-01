@@ -1,0 +1,38 @@
+public class ObjectCounter
+{
+   
+    private static int _objectCount = 0;
+
+    
+    public ObjectCounter()
+    {
+        _objectCount++;
+    }
+
+   
+    public static int GetObjectCount()
+    {
+        return _objectCount;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+         
+        Console.WriteLine("Начальное количество объектов: " + ObjectCounter.GetObjectCount());
+
+        
+        ObjectCounter obj1 = new ObjectCounter();
+        ObjectCounter obj2 = new ObjectCounter();
+        ObjectCounter obj3 = new ObjectCounter();
+
+        
+        Console.WriteLine("После создания 3 объектов: " + ObjectCounter.GetObjectCount());
+
+        
+        ObjectCounter obj4 = new ObjectCounter();
+        Console.WriteLine("После создания еще одного объекта: " + ObjectCounter.GetObjectCount());
+    }
+}
