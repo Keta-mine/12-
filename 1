@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+
+
+
+
+    public class Calculator
+    {
+
+
+        private static readonly string ErrorMessage = "Ошибка: деление на ноль!";
+
+
+        static Calculator()
+        {
+
+        }
+
+
+        public static double Add(double a, double b)
+        {
+            return a + b;
+        }
+
+
+        public static double Subtract(double a, double b)
+        {
+            return a - b;
+        }
+
+
+        public static double Multiply(double a, double b)
+        {
+            return a * b;
+        }
+
+
+        public static double Divide(double a, double b)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine(ErrorMessage);
+                return 0;
+            }
+            return a / b;
+        }
+
+
+
+
+
+    }
+
+}
+class Calcurator
+{
+    static void Main()
+    {
+        
+        Console.WriteLine("Сложение: " + Calculator.Add(10, 5));
+        Console.WriteLine("Вычитание: " + Calculator.Subtract(10, 5));
+        Console.WriteLine("Умножение: " + Calculator.Multiply(10, 5));
+        Console.WriteLine("Деление: " + Calculator.Divide(10, 5));
+        Console.WriteLine("Деление на ноль: " + Calculator.Divide(10, 0));
+
+        
+        Console.ReadLine();
+    }
